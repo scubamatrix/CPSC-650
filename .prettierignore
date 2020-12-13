@@ -1,0 +1,44 @@
+## root folders
+
+## folders
+.git/
+.idea/
+data/
+image/
+images/
+img/
+model/
+labels/
+models/
+SmartCar/
+Yahboom_Project/
+
+## file types
+*.bmp
+*.ipynb
+*.jpg
+*.jpeg
+*.mp3
+*.mp4
+*.mpeg
+*.mov
+*.png
+*.pdf
+
+## compress file types
+*.gz
+*.tar
+*.tgz
+*.zip
+
+## model files
+*.config
+*.index
+*.meta
+*.model
+*.pb
+*.pbtxt
+
+## specific files
+.DS_Store
+.gitignore
