@@ -1,5 +1,7 @@
 # Sample Code
 
+This repo contains the source code for my term project for CPSC-65000 Robotics.
+
 ## [Python quickstart](./tflite)
 
 This is a local repo based on the Python quickstart tutorial using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
