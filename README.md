@@ -2,6 +2,8 @@
 
 ## [Python quickstart](./tflite)
 
+This is a local repo based on the Python quickstart tutorial using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
+
 ## [Edge TPU simple camera examples](https://github.com/google-coral/examples-camera)
 
 This repo contains a collection of examples that use camera streams together with the TensorFlow Lite API with a Coral device such as the USB Accelerator or Dev Board.
