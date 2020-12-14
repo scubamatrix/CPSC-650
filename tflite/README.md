@@ -11,7 +11,7 @@
     curl https://storage.googleapis.com/download.tensorflow.org/models/mobilenet_v1_1.0_224_frozen.tgz  | tar xzv -C .  mobilenet_v1_1.0_224/labels.txt
 
     # sort labels
-    sort -k 2 -t > labels.txt
+    sort -k 2 -t : labels.txt
 ```
 
 ```bash
