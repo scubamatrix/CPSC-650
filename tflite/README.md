@@ -12,6 +12,7 @@
 
     # sort labels
     sort -k 2 -t : labels.txt
+    sort -k 2 -t : labels.txt
 ```
 
 ```bash
