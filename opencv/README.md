@@ -1,4 +1,4 @@
-# Yahboom Tank Code (codecypher)
+# OpenCV Sample Code
 
 ---
 
