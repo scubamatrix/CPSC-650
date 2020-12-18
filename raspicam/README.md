@@ -1,6 +1,6 @@
 # [Raspberry Pi camera example with Coral](https://github.com/google-coral/examples-camera/tree/master/raspicam)
 
-This folder contains example code using the [picamera](https://github.com/google-coral/examples-camera/tree/master/raspicam) python library to obtain camera images and perform image classification on the Edge TPU.
+This folder contains example code using the [picamera](https://github.com/google-coral/examples-camera/tree/master/raspicam) library for Python to obtain camera images and perform image classification on the Edge TPU.
 
 This code works on Raspberry Pi with the Pi Camera and Coral USB Accelerator.
 
