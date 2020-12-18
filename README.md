@@ -1,4 +1,4 @@
-# Sample Code
+# Robotics Term Project
 
 This repo contains the source code for my term project for CPSC-65000 Robotics.
 
