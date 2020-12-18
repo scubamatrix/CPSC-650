@@ -12,7 +12,7 @@ This folder contains code that uses camera streams together with the TensorFlow 
 
 ## [Raspberry Pi camera module](./raspicam)
 
-This folder contains code using picamera to obtain camera images and perform image classification on the Edge TPU.
+This folder contains code using the picamera library for Python to obtain camera images and perform image classification on the Edge TPU.
 
 This code works on Raspberry Pi with the Pi Camera and Coral USB Accelerator.
 
