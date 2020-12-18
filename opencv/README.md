@@ -21,7 +21,7 @@ Example code using OpenCV to obtain camera images and perform object detection o
 
     python3 detect.py \
         --model ../coral/models/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite \
-        --labels ../coral/models/coco_labels.txt
+        --labels ../coral/labels/coco_labels.txt
 
     python3 classify_capture.py \
           --model ../coral/models/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
