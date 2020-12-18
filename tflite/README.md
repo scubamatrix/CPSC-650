@@ -18,13 +18,7 @@
 ```bash
     # Run the sample
     python3 label_image.py \
-        --model_file ./mobilenet_v1_1.0_224.tflite \
-        --label_file ./mobilenet_v1_1.0_224/labels.txt \
+        --model_file ../coral/models/mobilenet_v1_1.0_224.tflite \
+        --label_file ../coral/labels/mobilenet_v1_1.0_224_labels.txt \
         --image ./grace_hopper.bmp
-
-    # Run the sample
-    python3 label_image.py \
-        --model_file ./models/mobilenet_v1_1.0_224.tflite \
-        --label_file ./labels/mobilenet_v1_1.0_224_labels.txt \
-        --image ./penny-and-me.jpg
 ```
