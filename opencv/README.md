@@ -20,7 +20,7 @@ Example code using OpenCV to obtain camera images and perform object detection o
       --labels ${TEST_DATA}/coco_labels.txt
 
     python3 detect.py \
-        --model ../coral/models/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite \
+        --model ../coral/models/ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite \
         --labels ../coral/labels/coco_labels.txt
 
     python3 classify_capture.py \
