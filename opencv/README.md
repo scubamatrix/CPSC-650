@@ -2,7 +2,7 @@
 
 ---
 
-## [OpenCV camera examples with Coral](https://github.com/google-coral/examples-camera)
+## [Edge TPU simple camera examples](https://github.com/google-coral/examples-camera)
 
 Example code using OpenCV to obtain camera images and perform object detection on the Edge TPU.
 
