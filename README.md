@@ -1,6 +1,6 @@
 # Robotics Term Project
 
-This repo contains the source code for my term project for CPSC-65000 Robotics using [Raspberry Pi G1 Tank](Raspberry pi G1 Tank) with Raspberry Pi 4 Model B and [Coral USB Accelerator](https://coral.ai/products/accelerator)
+This repo contains the source code for my term project for CPSC-65000 Robotics using [Raspberry Pi G1 Tank](https://github.com/YahboomTechnology/Raspberry-pi-G1-Tank) with Raspberry Pi 4 Model B and [Coral USB Accelerator](https://coral.ai/products/accelerator)
 
 ## [Python quickstart](./tflite)
 
