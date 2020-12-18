@@ -12,7 +12,7 @@ This folder contains code using the picamera library for Python to obtain camera
 
 This code works on Raspberry Pi with the Pi Camera and Coral USB Accelerator.
 
-## [Python quickstart](./tflite)
+## [Python quickstart](./quickstart)
 
 This folder contains code that is based on the Python quickstart tutorial using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
 
