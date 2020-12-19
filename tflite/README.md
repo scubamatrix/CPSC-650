@@ -1,6 +1,6 @@
-# [Python quickstart](https://www.tensorflow.org/lite/guide/python)
+# Python Quickstart
 
-This folder contains code that is based on the Python quickstart tutorial using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
+This folder contains code that is based on the [Python quickstart](https://www.tensorflow.org/lite/guide/python) using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
 
 ```bash
     # Get photo
