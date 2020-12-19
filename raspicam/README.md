@@ -7,11 +7,15 @@ This code works on Raspberry Pi with the Pi Camera and Coral USB Accelerator.
 ## Run the classification demo
 
 ```
-python3 classify_capture.py
+  python3 classify_capture.py
 ```
 
 By default, this uses the ```mobilenet_v2_1.0_224_quant_edgetpu.tflite``` model.
 
 You can change the model and the labels file using flags ```--model``` and ```--labels```.
 
-
+```
+  python3 classify_catpure.py \
+    --model ../coral/models/mobilenet_v1_1.0_224_quant.tflite \
+    --labels ../coral/labels/imagenet_labels.txt
+```
