@@ -32,6 +32,8 @@ Example code using OpenCV to obtain camera images and perform object detection o
 
 ## [TensorFlow Lite Python classification example with Pi Camera](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi)
 
+This example uses TensorFlow Lite with Python on a Raspberry Pi to perform real-time image classification using images streamed from the Pi Camera.
+
 ```bash
     cd examples/lite/examples/image_classification/raspberry_pi
 
