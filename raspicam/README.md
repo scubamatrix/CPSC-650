@@ -16,6 +16,6 @@ You can change the model and the labels file using flags ```--model``` and ```--
 
 ```
   python3 classify_capture.py \
-    --model ../coral/models/mobilenet_v1_1.0_224_quant.tflite \
+    --model ../coral/models/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
     --labels ../coral/labels/imagenet_labels.txt
 ```
