@@ -1,6 +1,6 @@
 # OpenCV Sample Code
 
----
+This folder contains code that uses camera streams together with the TensorFlow Lite API with a Coral device such as the USB Accelerator or Dev Board.
 
 ## [Edge TPU simple camera examples](https://github.com/google-coral/examples-camera)
 
