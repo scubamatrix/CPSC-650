@@ -1,5 +1,7 @@
 # [Python quickstart](https://www.tensorflow.org/lite/guide/python)
 
+This folder contains code that is based on the Python quickstart tutorial using TensorFlow Lite with Python for embedded devices based on Linux such as Raspberry Pi and Coral devices with Edge TPU.
+
 ```bash
     # Get photo
     curl https://raw.githubusercontent.com/tensorflow/tensorflow/master/tensorflow/lite/examples/label_image/testdata/grace_hopper.bmp > ./grace_hopper.bmp
