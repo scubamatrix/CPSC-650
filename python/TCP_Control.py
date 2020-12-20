@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
   TCP_control.py
-
 """
 import RPi.GPIO as GPIO
 import socket
