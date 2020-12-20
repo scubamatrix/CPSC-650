@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
   jeff_run.py
-
   The car will advance 1 s, back 1 s, turn left 2 s, turn right 2 s,
   spin left 3 s, spin right in place 3 s, stop 5s.
 """
@@ -134,36 +133,45 @@ def brake(delaytime):
     time.sleep(delaytime)
 
 
-# Delay 2s
-time.sleep(2)
+def main():
+    """
+    The car will advance 1 s, back 1 s, turn left 2 s, turn right 2 s,
+    spin left 3 s, spin right in place 3 s, stop 5s.
+    """
+    # Delay 2s
+    time.sleep(2)
 
-# The try/except statement is used to detect errors in the try block.
-# the except statement catches the exception information and processes it.
-# The robot car will advance 1s，back 1s，turn left 2s，turn right 2s，
-# turn left in place 3s, turn right  in place 3s，stop 1s。
-try:
-    motor_init()
+    # The try/except statement is used to detect errors in the try block.
+    # the except statement catches the exception information and processes it.
+    # The robot car will advance 1s，back 1s，turn left 2s，turn right 2s，
+    # turn left in place 3s, turn right  in place 3s，stop 1s。
+    try:
+        motor_init()
 
-    run(2)
-    # left(2)
-    # right(2)
-    spin_left(2)
-    spin_right(2)
-    back(2)
-    brake(5)
+        run(2)
+        # left(2)
+        # right(2)
+        spin_left(2)
+        spin_right(2)
+        back(2)
+        brake(5)
 
-    # while True:
-    #     run(1)
-    #     back(1)
-    #     left(2)
-    #     right(2)
-    #     spin_left(3)
-    #     spin_right(3)
-    #     brake(1)
+        # while True:
+        #     run(1)
+        #     back(1)
+        #     left(2)
+        #     right(2)
+        #     spin_left(3)
+        #     spin_right(3)
+        #     brake(1)
 
-except KeyboardInterrupt:
-    pass
+    except KeyboardInterrupt:
+        pass
 
-pwm_ENA.stop()
-pwm_ENB.stop()
-GPIO.cleanup()
+    pwm_ENA.stop()
+    pwm_ENB.stop()
+    GPIO.cleanup()
+
+
+if __name__ == "__main__":
+    main()

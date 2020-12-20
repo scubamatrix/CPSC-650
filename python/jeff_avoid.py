@@ -257,7 +257,7 @@ def servo_appointed_detection(pos):
     The servo rotates to the specified angle
     """
     for i in range(18):
-        # This needs to be adjusted so that ultrasonic sensor is centered 
+        # This needs to be adjusted so that ultrasonic sensor is centered
         pwm_servo.ChangeDutyCycle(1.5 + 10 * pos / 180)
 
 
@@ -308,7 +308,7 @@ def servo_color_carstate():
         time.sleep(0.28)
 
 
-if __name__ == "__main__":
+def main():
     # Wait 2s
     time.sleep(2)
 
@@ -332,3 +332,7 @@ if __name__ == "__main__":
     pwm_ENA.stop()
     pwm_ENB.stop()
     GPIO.cleanup()
+
+
+if __name__ == "__main__":
+    main()

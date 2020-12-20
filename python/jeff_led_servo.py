@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-  jeff_simple.py
-  Simple functions of servo and/or and LED.
+  jeff_led_servo.py
+  The servo starts to turn and lights up while turning to different angles.
 """
-
 import RPi.GPIO as GPIO
 import time
 
@@ -35,13 +34,6 @@ GPIO.setmode(GPIO.BCM)
 
 # Ignore warning information
 GPIO.setwarnings(False)
-
-
-def led_init():
-    # RGB pins are initialized to output mode
-    GPIO.setup(LED_R, GPIO.OUT)
-    GPIO.setup(LED_G, GPIO.OUT)
-    GPIO.setup(LED_B, GPIO.OUT)
 
 
 def servo_init():
@@ -106,63 +98,7 @@ def servo_control_color():
         time.sleep(0.009)
 
 
-def color_led():
-    """
-    The colorful searchlight will switch to different colors every second.
-    """
-    led_init()
-
-    # Display 7 color LED
-    try:
-        while True:
-            # Red
-            GPIO.output(LED_R, GPIO.HIGH)
-            GPIO.output(LED_G, GPIO.LOW)
-            GPIO.output(LED_B, GPIO.LOW)
-            time.sleep(1)
-
-            # Green
-            GPIO.output(LED_R, GPIO.LOW)
-            GPIO.output(LED_G, GPIO.HIGH)
-            GPIO.output(LED_B, GPIO.LOW)
-            time.sleep(1)
-
-            # Blue
-            GPIO.output(LED_R, GPIO.LOW)
-            GPIO.output(LED_G, GPIO.LOW)
-            GPIO.output(LED_B, GPIO.HIGH)
-            time.sleep(1)
-
-            # Yellow
-            GPIO.output(LED_R, GPIO.HIGH)
-            GPIO.output(LED_G, GPIO.HIGH)
-            GPIO.output(LED_B, GPIO.LOW)
-            time.sleep(1)
-
-            # Fuchsia
-            GPIO.output(LED_R, GPIO.HIGH)
-            GPIO.output(LED_G, GPIO.LOW)
-            GPIO.output(LED_B, GPIO.HIGH)
-            time.sleep(1)
-
-            # Aqua
-            GPIO.output(LED_R, GPIO.LOW)
-            GPIO.output(LED_G, GPIO.HIGH)
-            GPIO.output(LED_B, GPIO.HIGH)
-            time.sleep(1)
-
-            # Black (off)
-            GPIO.output(LED_R, GPIO.LOW)
-            GPIO.output(LED_G, GPIO.LOW)
-            GPIO.output(LED_B, GPIO.LOW)
-            time.sleep(1)
-    except (Exception) as e:
-        print(f"Unexpected error: {e}")
-
-    GPIO.cleanup()
-
-
-def servo_run():
+def main():
     """
     The servo starts to turn and lights up
     while turning to different angles.
@@ -185,5 +121,4 @@ def servo_run():
 
 
 if __name__ == "__main__":
-    # color_led()
-    servo_run()
+    main()
