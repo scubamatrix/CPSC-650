@@ -1,5 +1,7 @@
 # 3. Experimental Tutorial
 
+This folder contains sample code from the [Raspberry-Pi-G1-Tank](https://github.com/YahboomTechnology/Raspberry-pi-G1-Tank) repository.
+
 ## Basic Course
 
 1. Color_LED

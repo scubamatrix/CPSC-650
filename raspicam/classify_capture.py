@@ -6,12 +6,10 @@
 
   This code works on Raspberry Pi with the Pi Camera and Coral USB Accelerator.
 
-  References:
-    https://github.com/google-coral/examples-camera
+  https://github.com/google-coral/examples-camera
 """
 import argparse
 import collections
-from collections import deque
 import common
 import io
 import numpy as np
@@ -21,11 +19,16 @@ import picamera
 import tflite_runtime.interpreter as tflite
 import time
 
+from time import sleep
+from collections import deque
+
 Category = collections.namedtuple("Category", ["id", "score"])
 
 
 def get_output(interpreter, top_k, score_threshold):
-    """Returns no more than top_k categories with score >= score_threshold."""
+    """
+    Returns no more than top_k categories with score >= score_threshold.
+    """
     scores = common.output_tensor(interpreter, 0)
     categories = [
         Category(i, scores[i])
@@ -36,7 +39,8 @@ def get_output(interpreter, top_k, score_threshold):
 
 
 def main():
-    default_model_dir = "../all_models"
+    default_model_dir = "../coral/models"
+    default_label_dir = "../coral/labels"
     default_model = "mobilenet_v2_1.0_224_quant_edgetpu.tflite"
     default_labels = "imagenet_labels.txt"
     parser = argparse.ArgumentParser()
@@ -48,7 +52,7 @@ def main():
     parser.add_argument(
         "--labels",
         help="label file path",
-        default=os.path.join(default_model_dir, default_labels),
+        default=os.path.join(default_label_dir, default_labels),
     )
     args = parser.parse_args()
 
@@ -92,6 +96,7 @@ def main():
                         100 * result[1], labels[result[0]]
                     )
                 print(camera.annotate_text)
+                sleep(2)
         finally:
             camera.stop_preview()
 

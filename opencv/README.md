@@ -1,10 +1,12 @@
 # OpenCV Sample Code
 
-This folder contains code that uses camera streams together with the TensorFlow Lite API with a Coral device such as the USB Accelerator or Dev Board.
+This folder contains code that uses camera streams together with the TensorFlow Lite API with a Coral device such as the USB Accelerator.
 
-## [Edge TPU simple camera examples](https://github.com/google-coral/examples-camera)
+## OpenCV camera example with Coral
 
-Example code using OpenCV to obtain camera images and perform object detection on the Edge TPU.
+This folder contains example code from the [Edge TPU simple camera examples](https://github.com/google-coral/examples-camera) that uses OpenCV to obtain camera images and perform object detection on the Edge TPU.
+
+This code works on Linux/macOS/Windows using a webcam, Raspberry Pi with the Pi Camera, and on the Coral Dev Board using the Coral Camera or a webcam. For all settings other than the Coral Dev Board, you also need a Coral USB/PCIe/M.2 Accelerator.
 
 ```bash
     # Run the program
@@ -27,20 +29,3 @@ Example code using OpenCV to obtain camera images and perform object detection o
           --model ../coral/models/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
           --labels ../coral/labels/imagenet_labels.txt
 ```
-
----
-
-## [Models Built for the Edge TPU](https://coral.ai/models/)
-
-MobileNet SSD v2 (COCO)
-
-- Detects the location of 90 types of objects
-- Dataset: COCO
-- Input size: 300x300
-
-MobileNet SSD v2 (Faces)
-
-- Detects the location of human faces
-- Dataset: Open Images v4
-- Input size: 320x320
-- Does not require a labels file

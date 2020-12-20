@@ -384,54 +384,54 @@ def key_scan():
                     pass
 
 
-def distance():
-    """
-    Calculate distance (ultrasonic function)
-    """
-    GPIO.output(TrigPin, GPIO.LOW)
-    time.sleep(0.000002)
-    GPIO.output(TrigPin, GPIO.HIGH)
-    time.sleep(0.000015)
-    GPIO.output(TrigPin, GPIO.LOW)
-
-    t3 = time.time()
-
-    while not GPIO.input(EchoPin):
-        t4 = time.time()
-        if (t4 - t3) > 0.03:
-            return -1
-
-    t1 = time.time()
-
-    while GPIO.input(EchoPin):
-        t5 = time.time()
-        if (t5 - t1) > 0.03:
-            return -1
-
-    t2 = time.time()
-    time.sleep(0.01)
-    #    print "distance is %d " % (((t2 - t1)* 340 / 2) * 100)
-    return ((t2 - t1) * 340 / 2) * 100
-
-
-def distance_test():
-    num = 0
-    ultrasonic = []
-    while num < 5:
-        distance = distance()
-        while int(distance) == -1:
-            distance = distance()
-            print("Tdistance is %f" % (distance))
-        while int(distance) >= 500 or int(distance) == 0:
-            distance = distance()
-            print("Edistance is %f" % (distance))
-        ultrasonic.append(distance)
-        num = num + 1
-        time.sleep(0.01)
-    print(ultrasonic)
-    distance = (ultrasonic[1] + ultrasonic[2] + ultrasonic[3]) / 3
-    print("distance is %f" % (distance))
-    return distance
+# def distance():
+#     """
+#     Calculate distance (ultrasonic function)
+#     """
+#     GPIO.output(TrigPin, GPIO.LOW)
+#     time.sleep(0.000002)
+#     GPIO.output(TrigPin, GPIO.HIGH)
+#     time.sleep(0.000015)
+#     GPIO.output(TrigPin, GPIO.LOW)
+#
+#     t3 = time.time()
+#
+#     while not GPIO.input(EchoPin):
+#         t4 = time.time()
+#         if (t4 - t3) > 0.03:
+#             return -1
+#
+#     t1 = time.time()
+#
+#     while GPIO.input(EchoPin):
+#         t5 = time.time()
+#         if (t5 - t1) > 0.03:
+#             return -1
+#
+#     t2 = time.time()
+#     time.sleep(0.01)
+#     #    print "distance is %d " % (((t2 - t1)* 340 / 2) * 100)
+#     return ((t2 - t1) * 340 / 2) * 100
+#
+#
+# def distance_test():
+#     num = 0
+#     ultrasonic = []
+#     while num < 5:
+#         distance = distance()
+#         while int(distance) == -1:
+#             distance = distance()
+#             print("Tdistance is %f" % (distance))
+#         while int(distance) >= 500 or int(distance) == 0:
+#             distance = distance()
+#             print("Edistance is %f" % (distance))
+#         ultrasonic.append(distance)
+#         num = num + 1
+#         time.sleep(0.01)
+#     print(ultrasonic)
+#     distance = (ultrasonic[1] + ultrasonic[2] + ultrasonic[3]) / 3
+#     print("distance is %f" % (distance))
+#     return distance
 
 
 def servo_appointed_detection(pos):
@@ -442,51 +442,51 @@ def servo_appointed_detection(pos):
         pwm_servo.ChangeDutyCycle(2.5 + 10 * pos / 180)
 
 
-def servo_color_carstate():
-    """
-    Calculate color of RGB module
-    """
-    # red
-    GPIO.output(LED_R, GPIO.HIGH)
-    GPIO.output(LED_G, GPIO.LOW)
-    GPIO.output(LED_B, GPIO.LOW)
-    back(20, 20)
-    time.sleep(0.08)
-    brake()
-
-    servo_appointed_detection(0)
-    time.sleep(0.8)
-    rightdistance = distance_test()
-
-    servo_appointed_detection(180)
-    time.sleep(0.8)
-    leftdistance = distance_test()
-
-    servo_appointed_detection(90)
-    time.sleep(0.8)
-    frontdistance = distance_test()
-
-    if leftdistance < 30 and rightdistance < 30 and frontdistance < 30:
-        # Magenta
-        GPIO.output(LED_R, GPIO.HIGH)
-        GPIO.output(LED_G, GPIO.LOW)
-        GPIO.output(LED_B, GPIO.HIGH)
-        spin_right(85, 85)
-        time.sleep(0.58)
-    elif leftdistance >= rightdistance:
-        # Blue
-        GPIO.output(LED_R, GPIO.LOW)
-        GPIO.output(LED_G, GPIO.LOW)
-        GPIO.output(LED_B, GPIO.HIGH)
-        spin_left(85, 85)
-        time.sleep(0.28)
-    elif leftdistance <= rightdistance:
-        # Magenta
-        GPIO.output(LED_R, GPIO.HIGH)
-        GPIO.output(LED_G, GPIO.LOW)
-        GPIO.output(LED_B, GPIO.HIGH)
-        spin_right(85, 85)
-        time.sleep(0.28)
+# def servo_color_carstate():
+#     """
+#     Calculate color of RGB module
+#     """
+#     # red
+#     GPIO.output(LED_R, GPIO.HIGH)
+#     GPIO.output(LED_G, GPIO.LOW)
+#     GPIO.output(LED_B, GPIO.LOW)
+#     back(20, 20)
+#     time.sleep(0.08)
+#     brake()
+#
+#     servo_appointed_detection(0)
+#     time.sleep(0.8)
+#     rightdistance = distance_test()
+#
+#     servo_appointed_detection(180)
+#     time.sleep(0.8)
+#     leftdistance = distance_test()
+#
+#     servo_appointed_detection(90)
+#     time.sleep(0.8)
+#     frontdistance = distance_test()
+#
+#     if leftdistance < 30 and rightdistance < 30 and frontdistance < 30:
+#         # Magenta
+#         GPIO.output(LED_R, GPIO.HIGH)
+#         GPIO.output(LED_G, GPIO.LOW)
+#         GPIO.output(LED_B, GPIO.HIGH)
+#         spin_right(85, 85)
+#         time.sleep(0.58)
+#     elif leftdistance >= rightdistance:
+#         # Blue
+#         GPIO.output(LED_R, GPIO.LOW)
+#         GPIO.output(LED_G, GPIO.LOW)
+#         GPIO.output(LED_B, GPIO.HIGH)
+#         spin_left(85, 85)
+#         time.sleep(0.28)
+#     elif leftdistance <= rightdistance:
+#         # Magenta
+#         GPIO.output(LED_R, GPIO.HIGH)
+#         GPIO.output(LED_G, GPIO.LOW)
+#         GPIO.output(LED_B, GPIO.HIGH)
+#         spin_right(85, 85)
+#         time.sleep(0.28)
 
 
 def servo_ultrasonic_run():
@@ -496,7 +496,7 @@ def servo_ultrasonic_run():
     # The try/except statement is used to detect errors in the try block.
     # the except statement catches the exception information and processes it.
     try:
-        init()
+        servo_ultrasonic_init()
         key_scan()
         while True:
             distance = distance_test()
@@ -518,5 +518,5 @@ def servo_ultrasonic_run():
 if __name__ == "__main__":
     # color_led()
     # car_run()
-    # servo_run()
-    servo_ultrasonic_run()
+    servo_run()
+    # servo_ultrasonic_run()

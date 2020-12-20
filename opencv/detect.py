@@ -72,8 +72,9 @@ def get_output(interpreter, score_threshold, top_k, image_scale=1.0):
 
 
 def main():
-    default_model_dir = "../all_models"
-    default_model = "mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite"
+    default_model_dir = "../coral/models"
+    default_label_dir = "../coral/labels"
+    default_model = "ssd_mobilenet_v2_coco_quant_postprocess_edgetpu.tflite"
     default_labels = "coco_labels.txt"
 
     parser = argparse.ArgumentParser()
@@ -85,7 +86,7 @@ def main():
     parser.add_argument(
         "--labels",
         help="label file path",
-        default=os.path.join(default_model_dir, default_labels),
+        default=os.path.join(default_label_dir, default_labels),
     )
     parser.add_argument(
         "--top_k",
