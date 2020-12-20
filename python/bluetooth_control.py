@@ -8,7 +8,7 @@
   advance, backward, turn left, turn right, stop, any angle control of the servo,
   out fire, whistle, speed of robot car.
 
-  At the same time,  the distance measured by the ultrasonic wave are displayed
+  At the same time, the distance measured by the ultrasonic wave are displayed
   in real time on the Bluetooth APP interface by the serial port.
 
   NOTE: After terminating the program, the state of the relevant pin is uncertain
