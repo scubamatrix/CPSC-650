@@ -19,3 +19,16 @@ You can change the model and the labels file using flags ```--model``` and ```--
     --model ../coral/models/mobilenet_v2_1.0_224_quant_edgetpu.tflite \
     --labels ../coral/labels/imagenet_labels.txt
 ```
+---
+
+## [TensorFlow Lite Python classification example with Pi Camera](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/raspberry_pi)
+
+This example uses TensorFlow Lite with Python on a Raspberry Pi to perform real-time image classification using images streamed from the Pi Camera.
+
+```bash
+    cd examples/lite/examples/image_classification/raspberry_pi
+
+    python3 classify_picamera.py \
+      --model /tmp/mobilenet_v1_1.0_224_quant_edgetpu.tflite \
+      --labels /tmp/labels_mobilenet_quant_v1_224.txt
+```
