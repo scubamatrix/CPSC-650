@@ -2,8 +2,8 @@
 """
   bluetooth_control.py
   This program seems to require Python 2
-  
-  We can control car by Bluetooth App by Android or iOS Mobile phone.
+
+  We can control the tank by Bluetooth App by Android or iOS Mobile phone.
   The mobile phone sends commands through the serial port to control the
   advance, backward, turn left, turn right, stop, any angle control of the servo,
   out fire, whistle, speed of robot car.
