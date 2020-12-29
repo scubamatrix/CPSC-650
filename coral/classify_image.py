@@ -3,10 +3,8 @@
   Example using TF Lite to classify a given image using an Edge TPU.
 
   To run this code, you must attach an Edge TPU attached to the host and
-  install the Edge TPU runtime (`libedgetpu.so`) and `tflite_runtime`.
+  install the Edge TPU runtime `libedgetpu.so` and `tflite_runtime`.
   For device setup instructions, see g.co/coral/setup.
-
-  (use `install_requirements.sh` to get these files):
 
   python3 classify_image.py \
     --model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite  \
