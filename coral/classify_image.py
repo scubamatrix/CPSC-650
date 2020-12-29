@@ -4,9 +4,14 @@
 
   To run this code, you must attach an Edge TPU attached to the host and
   install the Edge TPU runtime (`libedgetpu.so`) and `tflite_runtime`.
+<<<<<<< HEAD
   For device setup instructions, see g.co/coral/setup.
 
   (use `install_requirements.sh` to get these files):
+=======
+  (use `install_requirements.sh` to get these files):
+  For device setup instructions, see g.co/coral/setup.
+>>>>>>> main
 
   python3 classify_image.py \
     --model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite  \
@@ -15,6 +20,10 @@
 
    https://coral.ai/docs/accelerator/get-started/#3-run-a-model-using-the-tensorflow-lite-api
 """
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 import argparse
 import time
 
