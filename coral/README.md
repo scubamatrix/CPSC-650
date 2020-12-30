@@ -4,21 +4,28 @@ The following Edge TPU models were used together with the corresponding labels f
 
 ## MobileNet V1
 
--   Recognizes 1,000 types of objects
--   Category: Image classification
--   Dataset: ImageNet
--   Input size: 224x224
+- Recognizes 1,000 types of objects
+- Category: Image classification
+- Dataset: ImageNet
+- Input size: 224x224
 
 ## MobileNet V3
 
--   Recognizes 1,000 types of objects
--   Category: Image classification
--   Dataset: ImageNet
--   Input size: 224x224
+- Recognizes 1,000 types of objects
+- Category: Image classification
+- Dataset: ImageNet
+- Input size: 224x224
 
 ## MobileNet SSD v2 (COCO)
 
--   Detects the location of 90 types of objects
--   Category: Object detection
--   Dataset: COCO
--   Input size: 300x300
+- Detects the location of 90 types of objects
+- Category: Object detection
+- Dataset: COCO
+- Input size: 300x300
+
+## MobileNet SSD v2 (Faces)
+
+- Detects the location of human faces
+- Dataset: Open Images v4
+- Input size: 320x320
+- Does not require a labels file
