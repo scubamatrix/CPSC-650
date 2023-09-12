@@ -10,7 +10,7 @@ This folder contains the Edge TPU models that are used in many of the code sampl
 
 This folder contains code that uses camera streams together with the TensorFlow Lite API with a Coral device such as the USB Accelerator or Dev Board.
 
-# [Raspberry-Pi-G1-Tank](./python)
+## [Raspberry-Pi-G1-Tank](./python)
 
 This folder contains sample code from the [Raspberry-Pi-G1-Tank](https://github.com/YahboomTechnology/Raspberry-pi-G1-Tank) repository.
 
